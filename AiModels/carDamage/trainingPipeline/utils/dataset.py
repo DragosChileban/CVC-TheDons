@@ -3,7 +3,7 @@ import torch
 from PIL import Image
 from torch.utils.data import Dataset
 
-class FoodDataset(Dataset):
+class DamageDataset(Dataset):
     def __init__(self, metadata, transforms, cat_names, data_path, augmentations=None):
         self.metadata = metadata
         self.transforms = transforms

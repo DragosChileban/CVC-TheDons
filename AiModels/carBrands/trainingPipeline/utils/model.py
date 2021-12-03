@@ -1,9 +1,9 @@
 import torch.nn as nn
 import torch.nn.functional as F
 
-class FoodRecognitionModel(nn.Module):
+class DamageModel(nn.Module):
     def __init__(self, backbone, out_features):
-        super(FoodRecognitionModel, self).__init__()
+        super(DamageModel, self).__init__()
         self.backbone = backbone
         self.batch_norm = nn.BatchNorm1d(num_features=backbone.fc.out_features)
         self.drop = nn.Dropout()

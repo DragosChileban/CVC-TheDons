@@ -2,14 +2,14 @@ import flask
 import werkzeug
 import numpy as np
 import json
-from inference import FoodRecognitionHandler
+from inference import DamageHandler
 
 ROOT = 'C:/Users/Andre/Documents/CVC_Project'
 MODEL_PATH = ROOT + '/results/exp/checkpoints/16.pth'
 
 # load numpy array with the classes
 classes = np.load(ROOT + '/resources/classes.npy')
-handler = FoodRecognitionHandler(MODEL_PATH, classes)
+handler = DamageHandler(MODEL_PATH, classes)
 
 app = flask.Flask(__name__)
 @app.route('/', methods = ['GET', 'POST'])

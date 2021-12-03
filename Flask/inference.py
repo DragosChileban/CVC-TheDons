@@ -1,5 +1,5 @@
 import torch
-from model import FoodRecognitionModel
+from model import DamageModel
 from PIL import Image
 import torchvision.models as models
 from torchvision import transforms
@@ -12,7 +12,7 @@ image_transforms = transforms.Compose([
     transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
 ])
 
-class FoodRecognitionHandler():
+class DamageHandler():
     def __init__(self, model_path, classes):
         if torch.cuda.is_available():
             self.device = torch.device('cuda')
@@ -20,7 +20,7 @@ class FoodRecognitionHandler():
             self.device = torch.device('cpu')
 
         self.classes = classes
-        self.model = FoodRecognitionModel(models.resnet50(pretrained=False), len(classes)).to(self.device)
+        self.model = DamageModel(models.resnet50(pretrained=False), len(classes)).to(self.device)
         self.model.load_state_dict(torch.load(model_path, map_location=self.device)['state_dict'])
 
     def predict(self, image_path):

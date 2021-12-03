@@ -2,7 +2,7 @@ import flask
 import werkzeug
 import numpy as np
 import json
-from inference import FoodRecognitionHandler
+from inference import DamageHandler
 
 ROOT = 'C:/Users/Andre/Documents/CVC-TheDons/'
 DAMAGE_MODEL_PATH = ROOT + '/AiModels/carDamage/results/exp/checkpoints/16.pth'
@@ -11,8 +11,8 @@ BRANDS_MODEL_PATH = ROOT + '/AiModels/carBrands/results/exp/checkpoints/37.pth'
 # load numpy array with the classes
 damageClasses = np.load(ROOT + '/Flask/resources/damageClasses.npy')
 brandsClasses = np.load(ROOT + '/Flask/resources/brandsClasses.npy')
-handlerDamage = FoodRecognitionHandler(DAMAGE_MODEL_PATH, damageClasses)
-handlerBrands = FoodRecognitionHandler(BRANDS_MODEL_PATH, brandsClasses)
+handlerDamage = DamageHandler(DAMAGE_MODEL_PATH, damageClasses)
+handlerBrands = DamageHandler(BRANDS_MODEL_PATH, brandsClasses)
 
 currentPriceIndex = 0
 
