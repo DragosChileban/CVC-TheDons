@@ -10,7 +10,8 @@ The main goal of this study is identifying the vehicle repair costs following ro
 ### Data Analysis
 The model is constructed on a [car models dataset](https://datasets.bifrost.ai/info/1077) the can be [downloaded here](https://www.dropbox.com/s/uwa7c5uz7cac7cw/VMMRdb.zip?dl=0), as well as a [car damage dataset](https://peltarion.com/knowledge-center/documentation/terms/dataset-licenses/car-damage). The application offers [repair shops info](https://keycollisioncenter.com/) that provide the required repair services as well as the range of prices that the user can use as a reference.
 ## Technologies
-Java, Python, Flask
+* Java
+* Python: Flask
 ### Python Libraries 
 * PyTorch, Numpy, Pandas, scikit-learn
 ### Java Packages and Libraries
