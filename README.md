@@ -16,8 +16,8 @@ Java, Python, Flask
 ### Java Packages and Libraries
 * Okhttp3
 ## Models Accuracy
-Car Model Recognition: Accuracy(0.93), F1_mean(0.93)
-Damage Detection Model: Accuracy(0.84), F1_mean(0.83)
+* Car Model Recognition: Accuracy(0.93), F1_mean(0.93)
+* Damage Detection Model: Accuracy(0.84), F1_mean(0.83)
 ## Installation process:
 * Install the Android App on your device or run it on an emulator
 * Run the app.py script from the "Flask" directory
